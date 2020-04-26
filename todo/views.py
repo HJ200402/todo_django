@@ -11,3 +11,12 @@ def todo_view(request):
     }
 
     return render(request, "todo_list.html", data)
+
+
+def todo_progress_view(request):
+    todos = Todo.objects.exclude(is_done=True)
+    data = {
+        "todos":todos,
+    }
+
+    return render(request, "todo_in_progress.html",data)
