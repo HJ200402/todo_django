@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'home',
+    'todo',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'coffee.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[os.path.join(BASE_DIR, 'home/', 'template')],
+        'DIRS':[os.path.join(BASE_DIR, 'home/', 'template'), os.path.join(BASE_DIR, 'todo/','template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

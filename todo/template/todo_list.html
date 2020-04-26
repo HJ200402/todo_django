@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo_list</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>To-do 목록</th>
+                <th>완료했나요?</th>
+            </tr>
+        </thead>
+        {% for todo in todos %}
+        <thead>
+            <tr>
+                <th>{{ todo.task }}</th>
+                <th>{{ todo.is_done }}</th>
+            </tr>
+        </thead>
+        {% endfor %}
+    </table>
+</body>
+</html>
