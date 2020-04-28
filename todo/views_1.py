@@ -1,22 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse # 장고의  http 폴더에서 HttpResponse 함수를 import
 from .models import Todo
 from .forms import AddForm
 
-def todo_view(request):
-    if request.method == 'POST':
-        form = AddForm(request.POST)
-        if form.is_valid():
-            form.save()
+# Create your views here.
 
+def todo_view(request):
     todos = Todo.objects.all()
     form = AddForm()
     data = {
-        "todos" : todos,
-        "form" : form,
+        "todos": todos,
+        "form": form,
     }
 
     return render(request, "todo_list.html", data)
+
 
 def todo_progress_view(request):
     todos = Todo.objects.exclude(is_done=True)
@@ -24,4 +22,4 @@ def todo_progress_view(request):
         "todos":todos,
     }
 
-    return render(request, "todo_in_progress.html", data)
+    return render(request, "todo_in_progress.html",data)

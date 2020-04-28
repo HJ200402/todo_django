@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todo_list</title>
+    <title>Todo_list_form</title>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>To-do 목록</th>
-                <th>완료했나요?</th>
-            </tr>
-        </thead>
-        {% for todo in todos %}
-        <thead>
-            <tr>
-                <th>{{ todo.task }}</th>
-                <th>{{ todo.is_done }}</th>
-            </tr>
-        </thead>
-        {% endfor %}
-    </table>
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">추가</button>
+    </form>
+    {% for todo in todos %}
+    <p>{{ todo.task }} | <button href="">삭제</button></p>
+    {% endfor %}
 </body>
 </html>
