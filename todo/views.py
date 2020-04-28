@@ -15,8 +15,9 @@ def todo_view(request):
         "todos" : todos,
         "form" : form,
     }
-
+    
     return render(request, "todo_list.html", data)
+
 
 def todo_progress_view(request):
     todos = Todo.objects.exclude(is_done=True)
