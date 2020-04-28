@@ -11,7 +11,7 @@
         <button type="submit">추가</button>
     </form>
     {% for todo in todos %}
-    <p>{{ todo.task }} | <button href="">삭제</button></p>
+    <p>{{ todo.task }} | <button type="submit" href="{% url 'todo_del' pk=todo.pk %}">삭제</button></p>
     {% endfor %}
 </body>
 </html>
