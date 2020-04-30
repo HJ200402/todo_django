@@ -1,27 +1,44 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/todo.css">
+    <link rel="stylesheet" href="{% static 'css/todo.css' %}" >
     <title>Todo_list</title>
 </head>
 <body>
+<header id="intro">
+<h1>
+  django Todo list
+</h1>
+</header>    
 
-<div class="center-col">
+<main role="main" id="main">
+  <div class="input"></div> 
     <form method="POST">
         {% csrf_token %} {{ form.as_p }}
         <button class="btn-add" type="submit">추가</button>
     </form>
-    {% for todo in todos %}
-    <p>{{ todo.task }} | 
-        <a class="btn-del" href="{% url 'todo_del' pk=todo.pk %}" >삭제</a>
-        <a class="btn-com" href="{% url 'todo_done' pk=todo.pk %}">완료</a></p>
-    
+  </div> 
 
+    {% for todo in todos %}
+  <div class="btn">
+    <p>{{ todo.task }} | 
+        <a href="{% url 'todo_del' pk=todo.pk %}" >삭제</a>
+        <a href="{% url 'todo_done' pk=todo.pk %}">완료<a></p>
+    
+  </div>
     
     {% endfor %}
 </div>  
 
+<footer id="footer">
+ <div class="copyright">
+     <p>Copyright&copy; March 2020 - April 2020 </p>
+ </div>
+</footer>
 </body>
 </html>
