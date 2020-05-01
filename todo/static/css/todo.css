@@ -1,10 +1,15 @@
-.center-col {
-    
+.container {
+    width: 960px;
+    margin: 0 auto;
+
 }
+
+
 
 #intro {
     height: 70px;
     background-color: turquoise;
+    margin: 0;
 }
 
 #intro h1 {
@@ -13,12 +18,49 @@
     font-style: italic;
 }
 
+
+.main {
+    text-align: center;
+}
+
+
 .input {
-    background-color: palegreen;
+    border: 10px;
+    background-color: #00cdcf;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
 }
 
-.container {
-    width: 960px;
-    margin: 0 auto;
+.btn-add {
+    background-color: #009A9C;
+    box-sizing: border-box;
+    color: #fff
+}
+
+.task {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 0 0 20px;
+    width: 50%;
+}
+
+.btn_del {
+    display: float;
+
+
 
 }
+
+.btn_com {
+
+}
+
+
+#footer {
+   
+    padding: 100px 0 0 50px;
+    text-align: center;
+
+}
+
