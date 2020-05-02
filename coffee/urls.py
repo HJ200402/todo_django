@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view),
     path('todos/', todo_view, name="todos"),
+    
     path('todos/in_progress', todo_progress_view, name="progress"),
     path('todos/<pk>/delete', delete_todo, name="todo_del"),
     path('todos/<pk>/completed', done_todo, name="todo_done")

@@ -34,8 +34,14 @@ def delete_todo(request, pk):
 
 def done_todo(request, pk):
     target = Todo.objects.get(pk=pk) #todo에서 pk 가pk인것을 가져와서
-    if target.is_done==False:   #is_done이 false이면 true로 바꿔라
-        target.is_done==True
-        target.save()
-        #   print(target.is_done)
+    target.is_done = True #is_done이 false이면 true로 바꿔라
+    target.save()
     return redirect("todos")
+           
+
+#
+#if target.is_done==False:   #is_done이 false이면 true로 바꿔라
+#        target.is_done==True
+#        target.save()
+#          print(target.is_done)
+        
