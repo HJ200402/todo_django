@@ -39,7 +39,7 @@ def done_todo(request, pk):
     return redirect("todos")
            
 
-#
+# def done_todo(request, pk) 이하를 아래와 같이 쓰면 동작하지 않는 이유가 궁금합니다.
 #if target.is_done==False:   #is_done이 false이면 true로 바꿔라
 #        target.is_done==True
 #        target.save()
