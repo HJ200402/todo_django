@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
+
+    {% load static %} <!--정적 파일 경로에 있는 모든 파일을 static에서 불러온다-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link ref="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-    <title>나의 첫 홈페이지</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>home</title>
 </head>
 <body>
    <main role="main" id="main">
-     <h1>welcome!</h1> 
+    <div class="layer">
+      <h1><p class="content" font-style="italic">welcome!</p></h1> 
+    </div>
    </main>
 </body>
 </html>

@@ -5,7 +5,6 @@
 }
 
 
-
 #intro {
     height: 70px;
     background-color: turquoise;
@@ -16,6 +15,7 @@
     font-size: 50px;
     text-align: center;
     font-style: italic;
+    color: #fff;
 }
 
 
