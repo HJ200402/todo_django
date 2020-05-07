@@ -33,9 +33,18 @@
 }
 
 .btn-add {
-    background-color: #009A9C;
+    background-color: #00B4B5;
     box-sizing: border-box;
-    color: #fff
+    color: #fff;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px;
+    cursor: pointer;
+
 }
 
 .task {

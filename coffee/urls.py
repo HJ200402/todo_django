@@ -22,6 +22,7 @@ from todo.views import todo_view, todo_progress_view, delete_todo, done_todo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view),
+    path('/', home-view, name="home"),
     path('todos/', todo_view, name="todos"),
     
     path('todos/in_progress', todo_progress_view, name="progress"),
